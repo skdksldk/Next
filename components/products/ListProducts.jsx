@@ -1,10 +1,9 @@
-"use client"
+"use client";
 
-import React from 'react'
+import React from "react";
 import Filters from "../layouts/Filters";
 
 import ProductItem from "./ProductItem";
-
 
 const ListProducts = ({ data }) => {
   console.log(data);
@@ -22,7 +21,7 @@ const ListProducts = ({ data }) => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default ListProducts
+export default ListProducts;
