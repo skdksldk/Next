@@ -15,7 +15,7 @@ export const AuthProvider = ({ children }) => {
   const registerUser = async ({ name, email, password }) => {
     try {
       const { data } = await axios.post(
-        `${process.env.API_URL}/api/auth/register`,
+        `http://localhost:3000/api/auth/register`,
         {
           name,
           email,
@@ -34,7 +34,7 @@ export const AuthProvider = ({ children }) => {
   const addNewAddress = async (address) => {
     try {
       const { data } = await axios.post(
-        `${process.env.API_URL}/api/address`,
+        `http://localhost:3000/api/address`,
         address
       );
 

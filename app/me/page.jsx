@@ -3,7 +3,7 @@ import axios from "axios";
 import React from "react";
 
 const getAddresses = async () => {
-  const { data } = await axios.get(`${process.env.API_URL}/api/address`);
+  const { data } = await axios.get(`http://localhost:3000/api/address`);
 
   return data?.addresses;
 };
