@@ -2,19 +2,9 @@ import Profile from "@/components/auth/Profile";
 import axios from "axios";
 import React from "react";
 
-import { cookies } from "next/headers";
-
 const getAddresses = async () => {
-
-  const nextCookies = cookies();
-
-  const nextAuthSessionToken = nextCookies.get("next-auth.session-token");
-
-  const { data } = await axios.get(`http://localhost:3000/api/address`, {
-    headers: {
-      Cookie: `next-auth.session-token=${nextAuthSessionToken?.value}`,
-    },
-  });
+ 
+  const { data } = await axios.get(`http://localhost:3000/api/address`);
 
   return data?.addresses;
 };
