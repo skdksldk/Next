@@ -19,14 +19,13 @@ const getProducts = async (searchParams) => {
   const { data } = await axios.get(
     `${process.env.API_URL}/api/products?${searchQuery}`
   );
-
   return data;
 };
 
 const HomePage = async ({ searchParams }) => {
-  const productsData = await getProducts(searchParams );
+  const productsData = await getProducts(searchParams);
 
-  return <ListProducts data={productsData} />
+  return <ListProducts data={productsData} />;
 };
 
 export default HomePage;

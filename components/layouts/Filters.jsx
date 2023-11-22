@@ -1,6 +1,6 @@
 "use client";
 
-import React, {useState} from "react";
+import React, { useState } from "react";
 import StarRatings from "react-star-ratings";
 import { useRouter } from "next/navigation";
 import { getPriceQueryParams } from "@/helpers/helpers";
@@ -42,14 +42,14 @@ const Filters = () => {
   function handleButtonClick() {
     if (typeof window !== "undefined") {
       queryParams = new URLSearchParams(window.location.search);
-    
+
       queryParams = getPriceQueryParams(queryParams, "min", min);
       queryParams = getPriceQueryParams(queryParams, "max", max);
 
       const path = window.location.pathname + "?" + queryParams.toString();
       router.push(path);
-      }
     }
+  }
 
   function checkHandler(checkBoxType, checkBoxValue) {
     if (typeof window !== "undefined") {
@@ -189,6 +189,7 @@ const Filters = () => {
                   value={rating}
                   className="h-4 w-4"
                   defaultChecked={checkHandler("ratings", `${rating}`)}
+                  onClick={(e) => handleClick(e.target)}
                 />
                 <span className="ml-2 text-gray-500">
                   {" "}

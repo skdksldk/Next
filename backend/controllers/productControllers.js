@@ -22,7 +22,7 @@ export const getProducts = async (req, res, next) => {
   apiFilters.pagination(resPerPage);
 
   products = await apiFilters.query.clone();
-  
+
   res.status(200).json({
     productsCount,
     resPerPage,
