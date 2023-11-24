@@ -4,9 +4,6 @@ const nextConfig = {
     appDir: true,
     esmExternals: true,
   },
- env:  {
-    API_URL : "http://localhost:3000",
-  },
   images: {
     domains: ["res.cloudinary.com"],
   },
