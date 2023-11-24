@@ -85,7 +85,7 @@ export const CartProvider = ({ children }) => {
       value={{
         cart,
         addItemToCart,
-        saveOnCheckout, 
+        saveOnCheckout,
         deleteItemFromCart,
       }}
     >

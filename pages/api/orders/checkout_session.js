@@ -1,15 +1,12 @@
 import nc from "next-connect";
 import dbConnect from "@/backend/config/dbConnect";
-import {
-  getAddresses,
-  newAddress,
-} from "@/backend/controllers/addressControllers";
+
+import { checkoutSession } from "@/backend/controllers/orderControllers";
 
 const handler = nc();
 
 dbConnect();
 
-handler.get(getAddresses);
-handler.post(newAddress);
+handler.post(checkoutSession);
 
 export default handler;
