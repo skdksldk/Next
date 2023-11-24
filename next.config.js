@@ -2,6 +2,7 @@
 const nextConfig = {
   experimental: {
     appDir: true,
+    esmExternals: true,
   },
  env:  {
     API_URL : "http://localhost:3000",
